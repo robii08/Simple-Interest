@@ -84,10 +84,10 @@ function App() {
     <>
       <div className='row' style={{backgroundColor:'black',height:'100vh'}}>
         <div className="col-4"></div>
-        <div className="col-md-4 col-lg-4 text-dark  bg-light pt-4 px-5 my-4 rounded-3" >
+        <div className="col-md-4 col-lg-4 text-dark  bg-light pt-4 px-5 my-4 rounded-3" style={{height:'90vh'}} >
           <h1 className='fw-bolder text-center'>Simple Interest App</h1>
           <p className='text-center'>calculate your simple interest easily</p>
-          <div className='text-center bg-success mx-2 mt-5 mb-5 py-4 rounded-2'>  
+          <div className='text-center bg-success mx-2 mt-4 mb-4 py-4 rounded-2'>  
             <h1 className='fw-bold'>₹{interest}</h1>
             <p>Total Simple Interest</p>
           </div>
@@ -101,9 +101,9 @@ function App() {
               {!isYear && <p className='text-danger'>*invalid input</p>}
               
             </div>
-            <div className='mx-2 d-grid gap-2 mb-4 mt-5'>
-              <Button className="btn btn-success py-3" variant="contained" type='submit' color='warning' disabled={!isPrinciple || !isRate || !isYear}>calculate</Button>
-              <Button className="btn btn-danger py-3" variant="contained" onClick={reset}>reset</Button>
+            <div className='mx-2 mb-4 mt-5 d-flex justify-content-between'>
+              <Button className="btn btn-success py-3 px-4" variant="contained" type='submit' color='warning' disabled={!isPrinciple || !isRate || !isYear}>calculate</Button>
+              <Button className="btn btn-danger py-3 px-5" variant="contained" onClick={reset}>reset</Button>
               
             </div>
          </form>
